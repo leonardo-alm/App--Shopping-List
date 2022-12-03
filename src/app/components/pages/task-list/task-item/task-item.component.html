@@ -1,0 +1,30 @@
+<mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header *ngIf="item.quantidade > 0; else changeColor">
+        <mat-panel-title>
+            {{item.tipo}}
+        </mat-panel-title>
+        <mat-panel-description>
+            Este é o sumário do item {{item.tipo}}
+        </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template #changeColor >
+        <mat-expansion-panel-header  >
+            <mat-panel-title class="dark" >
+                {{item.tipo}}
+            </mat-panel-title>
+            <mat-panel-description class="dark">
+                Este é o sumário do item {{item.tipo}}
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+      </ng-template>
+    <ul *ngIf="item.quantidade > 0; else noItem">
+        <li>Roupa: {{item.tipo}}</li>
+        <li>Tamanho: {{item.tamanho}}</li>
+        <li>Cor: {{item.cor}}</li>
+        <li>Genero: {{item.genero}}</li>
+        <li >Quantidade: {{item.quantidade}}</li>
+    </ul>
+    <ng-template #noItem>
+      <p class="dark">Não há!</p>
+    </ng-template>
+</mat-expansion-panel>

@@ -1,0 +1,19 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+button{
+    color: darkblue;
+} 
+
+span, .share{
+    margin-left: 1rem;
+}
+
+mat-toolbar{
+    background-color: rgb(127, 127, 196) ;
+}
+
+.title{
+    color: whitesmoke;
+}
