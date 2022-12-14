@@ -1,7 +1,8 @@
 export interface Roupa {
+    id: number,
     tipo: string,
-    tamanho: string | number,
-    cor: string,
-    genero: string,
-    quantidade: number,
+    tamanho: string,
+    cor?: string,
+    genero?: string,
+    quantidade: string,
 }

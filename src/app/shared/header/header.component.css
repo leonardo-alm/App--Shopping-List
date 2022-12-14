@@ -6,7 +6,7 @@ button{
     color: darkblue;
 } 
 
-span, .share{
+span, .share, button{
     margin-left: 1rem;
 }
 
@@ -16,4 +16,8 @@ mat-toolbar{
 
 .title{
     color: whitesmoke;
+}
+
+button:hover{
+    cursor: pointer;
 }
