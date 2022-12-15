@@ -17,17 +17,7 @@ export class NewClothingComponent implements OnInit {
   }
 
   addClothing(roupa: Roupa){
-    const formData = new FormData()
-
-    formData.append('tipo', roupa.tipo)
-    formData.append('tamanho', roupa.tamanho)
-    formData.append('quantidade', roupa.quantidade)
-
-    if(roupa.cor) formData.append('cor', roupa.cor)
-    if(roupa.genero) formData.append('genero', roupa.genero)
-
-    this.listService.includeClothing(formData).subscribe()
-
+    this.listService.postClothing(roupa).subscribe()
     this.router.navigate(['/'])
   }
 

@@ -5,8 +5,9 @@
 mat-expansion-panel,
 mat-panel-title,
 mat-panel-description {
-  background-color: rgb(127, 127, 196);
+  background-color: #121212;
   color: whitesmoke;
+  width: 50vw;
 }
 
 .dark {

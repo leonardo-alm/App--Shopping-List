@@ -18,6 +18,8 @@ export class ListService {
   }
 
   getClothing(id: number): Observable<Roupa> {
+    console.log(id)
+    console.log(this.http.get<Roupa>(`${this.apiUrl}/${id}`))
     return this.http.get<Roupa>(`${this.apiUrl}/${id}`)
   }
 
@@ -25,16 +27,12 @@ export class ListService {
     return this.http.delete<Roupa>(`${this.apiUrl}/${id}`)
   }
 
-  includeClothing(formData: FormData): Observable<FormData>{
-    console.log(formData)
-    return this.http.post<FormData>(this.apiUrl, formData)
+  postClothing(roupa: Roupa): Observable<Roupa>{
+    return this.http.post<Roupa>(this.apiUrl, roupa)
   }
 
-  updateMoment(id: number, formData: FormData): Observable<FormData>{
-    console.log(formData)
+  updateClothing(id: number, roupa: Roupa): Observable<Roupa>{
     const url = `${this.apiUrl}/${id}`
-    return this.http.put<FormData>(url, formData)
+    return this.http.put<Roupa>(url, roupa)
   }
-
-
 }

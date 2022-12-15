@@ -25,16 +25,7 @@ export class EditClothingComponent implements OnInit {
 
   editClothing(roupa: Roupa){
     const id = this.roupa?.id
-    const formData = new FormData()
-
-    formData.append('tipo', roupa.tipo)
-    formData.append('tamanho', roupa.tamanho)
-    formData.append('quantidade', roupa.quantidade)
-
-    if(roupa.cor) formData.append('cor', roupa.cor)
-    if(roupa.genero) formData.append('genero', roupa.genero)
-
-    this.listService.updateMoment(id!, formData).subscribe()
+    this.listService.updateClothing(id!, roupa).subscribe()
 
     this.router.navigate(['/'])
   }
