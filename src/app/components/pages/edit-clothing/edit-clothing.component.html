@@ -1,1 +1,3 @@
-<app-clothing-form [clothingData]="roupa" [botaoText] = "botao" (onSubmit)="editClothing($event)"></app-clothing-form>
+<div *ngIf="roupa">
+    <app-clothing-form [clothingData]="roupa" [botaoText] = "botao" (onSubmit)="editClothing($event)"></app-clothing-form>
+</div>

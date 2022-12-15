@@ -11,16 +11,14 @@ import { ListService } from 'src/app/services/list.service';
 export class EditClothingComponent implements OnInit {
 
   botao: string = "Atualizar!"
-  roupa!: Roupa
+  roupa?: Roupa
 
   constructor(private listService: ListService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'))
-    console.log(id)
-    this.listService.getClothing(id).subscribe((roupa) => this.roupa = roupa)
-    if(this.roupa) console.log(this.roupa)
-    
+
+    this.listService.getClothing(id).subscribe((roupa) => this.roupa = roupa) 
   }
 
   editClothing(roupa: Roupa){

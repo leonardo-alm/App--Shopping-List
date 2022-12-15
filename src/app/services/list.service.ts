@@ -19,7 +19,8 @@ export class ListService {
 
   getClothing(id: number): Observable<Roupa> {
     console.log(id)
-    console.log(this.http.get<Roupa>(`${this.apiUrl}/${id}`))
+    const url = `${this.apiUrl}/${id}`
+    console.log(this.http.get<Roupa>(url))
     return this.http.get<Roupa>(`${this.apiUrl}/${id}`)
   }
 
