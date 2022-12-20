@@ -1,8 +1,30 @@
 <form class="task-form" (ngSubmit)="submit()" [formGroup]="clothingForm" #formDir="ngForm">
-    <div class="form-group">
-      <input type="hidden" formControlName="id"/>
-    </div>
-  
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Tipo</mat-label>
+    <input matInput formControlName="tipo" placeholder="Informe o tipo">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Tamanho</mat-label>
+    <input matInput formControlName="tamanho" placeholder="Informe o tamanho">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Cor</mat-label>
+    <input matInput formControlName="cor" placeholder="Informe a cor">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Gênero</mat-label>
+    <input matInput formControlName="genero" placeholder="Informe o gênero">
+  </mat-form-field>
+
+  <mat-form-field class="full-width" appearance="fill">
+    <mat-label>Quantidade</mat-label>
+    <input matInput formControlName="quantidade" placeholder="Informe a quantidade">
+  </mat-form-field>
+  <button mat-raised-button class="sbmt" type="submit" value="">{{ botaoText }}</button>
+<!--   <div>
     <div class="form-group">
       <label for="tipo">Tipo:</label>
       <input type="text" formControlName="tipo" placeholder="Informe o tipo" required/>
@@ -10,7 +32,7 @@
         <p *ngIf="tipo.errors?.['required']">O tipo é obrigatório.</p>
       </div>
     </div>
-  
+
     <div class="form-group">
       <label for="tamanho">Tamanho:</label>
       <input type="text" formControlName="tamanho" placeholder="Informe o tamanho"/>
@@ -36,7 +58,6 @@
         <p *ngIf="quantidade.errors?.['required']">A quantidade é obrigatória.</p>
       </div>
     </div>
-  
-    <input class="sbmt" type="submit" value="{{ botaoText }}" />
+</div> -->
   </form>
   

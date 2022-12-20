@@ -1,5 +1,5 @@
 <mat-expansion-panel hideToggle *ngIf="item">
-    <mat-expansion-panel-header>  <!-- *ngIf="item.quantidade > 0; else changeColor" -->
+    <mat-expansion-panel-header>
         <mat-panel-title>
             {{item.tipo}}
         </mat-panel-title>
@@ -7,35 +7,30 @@
             Este é o sumário do item {{item.tipo}}
         </mat-panel-description>
     </mat-expansion-panel-header>
-    <!-- <ng-template #changeColor >
-        <mat-expansion-panel-header  >
-            <mat-panel-title class="dark" >
-                {{item.tipo}}
-            </mat-panel-title>
-            <mat-panel-description class="dark">
-                Este é o sumário do item {{item.tipo}}
-            </mat-panel-description>
-        </mat-expansion-panel-header>
-      </ng-template> -->
-      <div > <!-- *ngIf="item.quantidade > 0; else noItem" -->
-        <ul >
+    <div>
+        <ul>
             <li>Roupa: {{item.tipo}}</li>
             <li>Tamanho: {{item.tamanho}}</li>
             <li>Cor: {{item.cor}}</li>
             <li>Genero: {{item.genero}}</li>
             <li>Quantidade: {{item.quantidade}}</li>
         </ul>
-        <button mat-icon-button class="example-icon delete" aria-label="Example icon-button with delete icon">
-            <mat-icon (click)="deleteItem(item)" class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
+        <button class="example-icon delete" aria-label="Example icon-button with delete icon">
+            <mat-icon (click)="openDialog()" class="example-icon" aria-hidden="false"
+                aria-label="Example delete icon">delete</mat-icon>
         </button>
         <a routerLink="/edit/{{item.id}}">
-            <button mat-icon-button class="example-icon edit" aria-label="Example icon-button with edit icon">
+            <button class="example-icon edit" aria-label="Example icon-button with edit icon">
                 <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">edit</mat-icon>
             </button>
         </a>
-      </div>
-    
-<!--     <ng-template #noItem>
-      <p class="dark">Não há!</p>
-    </ng-template> -->
+    </div>
+
+    <ng-template #dialogTemplate>
+        <div>Tem certeza que quer deletar?</div>
+        <div class="buttons">
+            <button mat-raised-button mat-dialog-close class="no btn">Não</button>
+            <button mat-raised-button mat-dialog-close (click)="deleteItem(item)" class="yes btn">Sim</button>
+        </div>
+    </ng-template>
 </mat-expansion-panel>

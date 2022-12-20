@@ -3,7 +3,7 @@
   }
 
 button{
-    color: #121212;
+    color: #24262b;
 } 
 
 span, .share, button{
@@ -11,7 +11,7 @@ span, .share, button{
 }
 
 mat-toolbar{
-    background-color:  #121212;
+    background-color:  #24262b;
 }
 
 .title{

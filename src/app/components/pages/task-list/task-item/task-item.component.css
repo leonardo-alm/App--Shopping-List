@@ -5,20 +5,37 @@
 mat-expansion-panel,
 mat-panel-title,
 mat-panel-description {
-  background-color: #121212;
+  background-color: #24262b;
   color: whitesmoke;
-  width: 50vw;
+  width: 40vw;
 }
 
-.dark {
-  color: rgba(0, 0, 0, 0.733);
-  font-weight: bold;
+mat-expansion-panel{
+  margin-top: 5px;
 }
 
-button {
+.edit {
   margin-left: 0.8em;
 }
 
 button:hover{
   cursor: pointer;
+}
+
+button{
+  color: #24262b;
+}
+
+.buttons{
+  display: flex;
+  justify-content:center;
+  margin-top: 10px;
+}
+
+.yes{
+  margin-left: 20px;
+}
+
+.btn{
+  padding: 0px 15px;
 }

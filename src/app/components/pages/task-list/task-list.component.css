@@ -1,7 +1,6 @@
-div{
+.list-container {
     width: 100vw;
     display: flex;
-    align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin: 100px 0px;
 }

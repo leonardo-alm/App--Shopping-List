@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from 'src/app/material/material.module';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
@@ -20,7 +21,7 @@ import { EditClothingComponent } from './edit-clothing/edit-clothing.component';
     TaskItemComponent,
     NewClothingComponent,
     ClothingFormComponent,
-    EditClothingComponent
+    EditClothingComponent,
     
   ],
   imports: [
@@ -28,7 +29,8 @@ import { EditClothingComponent } from './edit-clothing/edit-clothing.component';
     MaterialModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
     TaskListComponent,

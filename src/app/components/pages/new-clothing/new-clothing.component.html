@@ -1,1 +1,7 @@
-<app-clothing-form [botaoText] = "botao" (onSubmit)="addClothing($event)"></app-clothing-form>
+<app-clothing-form class="form-container" [botaoText] = "botao" (onSubmit)="addClothing($event)">
+    <ng-template #dialogTemplate>
+        <!-- <app-success-dialog></app-success-dialog> -->
+     <div>Item adicionado com sucesso!</div>
+    </ng-template>
+</app-clothing-form>
+

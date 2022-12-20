@@ -1,3 +1,9 @@
 <div *ngIf="roupa">
-    <app-clothing-form [clothingData]="roupa" [botaoText] = "botao" (onSubmit)="editClothing($event)"></app-clothing-form>
+    <app-clothing-form class="form-container" [clothingData]="roupa" [botaoText] = "botao" (onSubmit)="editClothing($event)">
+        <ng-template #dialogTemplate>
+            <!-- <app-success-dialog></app-success-dialog> -->
+            <div>Item atualizado com sucesso!</div>
+        </ng-template>
+    </app-clothing-form>
 </div>
+

@@ -1,0 +1,11 @@
+/* ::ng-deep #mat-dialog-1{
+    background-color: rgb(210, 81, 116)
+}
+
+ */
+
+ .form-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }

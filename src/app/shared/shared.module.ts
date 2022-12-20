@@ -1,15 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+
+import { MaterialModule } from '../material/material.module';
 
 import { HeaderComponent } from './header/header.component';
-import { MaterialModule } from '../material/material.module';
-import { RouterModule } from '@angular/router';
+import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
+import { FooterComponent } from './footer/footer.component';
+
+
 
 
 
 @NgModule({
   declarations: [
-    HeaderComponent
+    HeaderComponent,
+    SuccessDialogComponent,
+    FooterComponent
   ],
   
   imports: [
@@ -18,7 +25,9 @@ import { RouterModule } from '@angular/router';
     RouterModule
   ],
   exports: [
-    HeaderComponent
+    HeaderComponent,
+    SuccessDialogComponent,
+    FooterComponent
   ]
 })
 export class SharedModule { }

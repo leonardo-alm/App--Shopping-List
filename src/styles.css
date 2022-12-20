@@ -1,3 +1,11 @@
+html,
+body {
+    height: 100%;
+    background-color: rgb(243, 235, 235);
+    overflow-x: hidden;
+}
 
-html, body { height: 100%; background-color:rgba(243, 235, 235, 0.587)}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
