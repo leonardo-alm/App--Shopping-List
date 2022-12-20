@@ -4,6 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
+import { ShareIconsModule } from 'ngx-sharebuttons/icons';
+
 import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material/material.module';
 import { SharedModule } from './shared/shared.module';
@@ -28,7 +31,9 @@ import { AppComponent } from './app.component';
     PagesModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule  
+    ReactiveFormsModule,
+    ShareButtonsModule,
+    ShareIconsModule,  
   ],
   providers: [],
   bootstrap: [AppComponent]
