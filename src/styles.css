@@ -9,3 +9,11 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.mat-placeholder-required{
+    color: whitesmoke;
+}
+
+.mat-form-field.mat-focused .mat-form-field-ripple {
+    background-color: rgb(180, 180, 180);
+}

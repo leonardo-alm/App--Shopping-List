@@ -16,7 +16,7 @@
             <li>Quantidade: {{item.quantidade}}</li>
         </ul>
         <button class="example-icon delete" aria-label="Example icon-button with delete icon">
-            <mat-icon (click)="openDialog()" class="example-icon" aria-hidden="false"
+            <mat-icon (click)="openConfirmDialog()" class="example-icon" aria-hidden="false"
                 aria-label="Example delete icon">delete</mat-icon>
         </button>
         <a routerLink="/edit/{{item.id}}">
@@ -26,11 +26,15 @@
         </a>
     </div>
 
-    <ng-template #dialogTemplate>
+    <ng-template #confirmDialogTemplate>
         <div>Tem certeza que quer deletar?</div>
         <div class="buttons">
             <button mat-raised-button mat-dialog-close class="no btn">Não</button>
             <button mat-raised-button mat-dialog-close (click)="deleteItem(item)" class="yes btn">Sim</button>
         </div>
+    </ng-template>
+    
+    <ng-template #successDialogTemplate>
+     <div>Item deletado com sucesso!</div>
     </ng-template>
 </mat-expansion-panel>

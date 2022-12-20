@@ -33,14 +33,6 @@
       "quantidade": "asd"
     },
     {
-      "id": 7,
-      "tipo": "sd",
-      "tamanho": "ds",
-      "cor": "",
-      "genero": "",
-      "quantidade": "sd"
-    },
-    {
       "id": 9,
       "tipo": "sd",
       "tamanho": "ds",
@@ -50,35 +42,11 @@
     },
     {
       "id": 10,
-      "tipo": "ds",
-      "tamanho": "ds",
+      "tipo": "as",
+      "tamanho": "saas",
       "cor": "",
       "genero": "",
-      "quantidade": "ds"
-    },
-    {
-      "id": 11,
-      "tipo": "sd",
-      "tamanho": "sd",
-      "cor": "",
-      "genero": "",
-      "quantidade": "sd"
-    },
-    {
-      "id": 12,
-      "tipo": "ds",
-      "tamanho": "s",
-      "cor": "",
-      "genero": "asdfsdsd",
-      "quantidade": "sadsad"
-    },
-    {
-      "id": 13,
-      "tipo": "asd",
-      "tamanho": "asd",
-      "cor": "",
-      "genero": "",
-      "quantidade": "asd"
+      "quantidade": "as"
     }
   ]
 }

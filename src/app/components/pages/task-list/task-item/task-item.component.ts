@@ -11,21 +11,33 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class TaskItemComponent implements OnInit {
   @Input() item?: Roupa
-  @ViewChild('dialogTemplate') dialogTemplate?: TemplateRef<any>;
+  @ViewChild('confirmDialogTemplate') confirmDialogTemplate?: TemplateRef<any>;
+  @ViewChild('successDialogTemplate') successDialogTemplate?: TemplateRef<any>;
 
-  constructor(private listService: ListService,  private dialog: MatDialog) { }
+  constructor(private listService: ListService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
 
-  openDialog() {
-    if (this.dialogTemplate) {
-      this.dialog.open(this.dialogTemplate);
+  openConfirmDialog() {
+    if (this.confirmDialogTemplate) {
+      this.dialog.open(this.confirmDialogTemplate);
     }
   }
 
-  deleteItem(item: Roupa){
+  openSuccessDialog() {
+    if (this.successDialogTemplate) {
+      const dialogRef = this.dialog.open(this.successDialogTemplate);
+
+      setTimeout(() => {
+        dialogRef.close();
+      }, 2000)
+    }
+  }
+
+  deleteItem(item: Roupa) {
     this.listService.deleteClothing(item.id).subscribe()
     this.item = undefined;
+    this.openSuccessDialog()
   }
 }
