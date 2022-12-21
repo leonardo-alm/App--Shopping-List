@@ -21,15 +21,13 @@ export class HeaderComponent implements OnInit {
     if (this.successDialogTemplate) {
       const dialogRef = this.dialog.open(this.successDialogTemplate);
 
-      setTimeout(() => {
-        dialogRef.close();
-      }, 2000)
+      setTimeout(() => dialogRef.close(), 2500)
     }
   }
 
   openShareDialog() {
     if (this.shareDialogTemplate) {
-      const dialogRef = this.dialog.open(this.shareDialogTemplate);
+      this.dialog.open(this.shareDialogTemplate);
     }
   }
 }

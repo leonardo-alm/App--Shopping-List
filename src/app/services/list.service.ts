@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
-import { Roupa } from '../Roupa';
+import { Clothing } from '../Clothing';
 
 @Injectable({
   providedIn: 'root'
@@ -13,27 +13,27 @@ export class ListService {
 
   constructor(private http: HttpClient) { }
 
-  getClothes(): Observable<Roupa[]>{
-    return this.http.get<Roupa[]>(this.apiUrl)
+  getClothes(): Observable<Clothing[]>{
+    return this.http.get<Clothing[]>(this.apiUrl)
   }
 
-  getClothing(id: number): Observable<Roupa> {
+  getClothing(id: number): Observable<Clothing> {
     console.log(id)
     const url = `${this.apiUrl}/${id}`
-    console.log(this.http.get<Roupa>(url))
-    return this.http.get<Roupa>(`${this.apiUrl}/${id}`)
+    console.log(this.http.get<Clothing>(url))
+    return this.http.get<Clothing>(`${this.apiUrl}/${id}`)
   }
 
   deleteClothing(id: number){
-    return this.http.delete<Roupa>(`${this.apiUrl}/${id}`)
+    return this.http.delete<Clothing>(`${this.apiUrl}/${id}`)
   }
 
-  postClothing(roupa: Roupa): Observable<Roupa>{
-    return this.http.post<Roupa>(this.apiUrl, roupa)
+  postClothing(Clothing: Clothing): Observable<Clothing>{
+    return this.http.post<Clothing>(this.apiUrl, Clothing)
   }
 
-  updateClothing(id: number, roupa: Roupa): Observable<Roupa>{
+  updateClothing(id: number, Clothing: Clothing): Observable<Clothing>{
     const url = `${this.apiUrl}/${id}`
-    return this.http.put<Roupa>(url, roupa)
+    return this.http.put<Clothing>(url, Clothing)
   }
 }

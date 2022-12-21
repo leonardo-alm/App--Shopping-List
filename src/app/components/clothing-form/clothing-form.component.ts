@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 
-import { Roupa } from 'src/app/Roupa';
+import { Clothing } from 'src/app/Clothing';
 
 @Component({
   selector: 'app-clothing-form',
@@ -10,9 +10,9 @@ import { Roupa } from 'src/app/Roupa';
 })
 export class ClothingFormComponent implements OnInit {
 
-  @Output() onSubmit = new EventEmitter<Roupa>()
-  @Input() botaoText!: string;
-  @Input() clothingData: Roupa | null = null
+  @Output() onSubmit = new EventEmitter<Clothing>()
+  @Input() buttonText!: string;
+  @Input() clothingData: Clothing | null = null
 
   clothingForm!: FormGroup; 
 
@@ -21,24 +21,24 @@ export class ClothingFormComponent implements OnInit {
   ngOnInit(): void {
       this.clothingForm = new FormGroup({
         id: new FormControl(this.clothingData ? this.clothingData.id : ''),
-        tipo: new FormControl(this.clothingData ? this.clothingData.tipo : '', [Validators.required]),
-        tamanho: new FormControl(this.clothingData ? this.clothingData.tamanho : '', [Validators.required,]),
-        cor: new FormControl(this.clothingData ? this.clothingData.cor : ''),
-        genero: new FormControl(this.clothingData ? this.clothingData.genero : ''),
-        quantidade: new FormControl(this.clothingData ? this.clothingData.quantidade : '', [Validators.required,]),
+        type: new FormControl(this.clothingData ? this.clothingData.type : '', [Validators.required]),
+        size: new FormControl(this.clothingData ? this.clothingData.size : '', [Validators.required,]),
+        color: new FormControl(this.clothingData ? this.clothingData.color : ''),
+        gender: new FormControl(this.clothingData ? this.clothingData.gender : ''),
+        amount: new FormControl(this.clothingData ? this.clothingData.amount : '', [Validators.required,]),
       });
   }
 
-  get tipo() {
-    return this.clothingForm.get('tipo')!;
+  get type() {
+    return this.clothingForm.get('type')!;
   }
 
-  get tamanho() {
-    return this.clothingForm.get('tamanho')!;
+  get size() {
+    return this.clothingForm.get('size')!;
   }
 
-  get quantidade() {
-    return this.clothingForm.get('quantidade')!;
+  get amount() {
+    return this.clothingForm.get('amount')!;
   }
 
   submit() {

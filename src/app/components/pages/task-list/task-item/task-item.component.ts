@@ -1,7 +1,7 @@
 import { Component, Input, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
-import { Roupa } from 'src/app/Roupa';
+import { Clothing } from 'src/app/Clothing';
 import { ListService } from 'src/app/services/list.service';
 
 @Component({
@@ -10,7 +10,7 @@ import { ListService } from 'src/app/services/list.service';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() item?: Roupa
+  @Input() item?: Clothing
   @ViewChild('confirmDialogTemplate') confirmDialogTemplate?: TemplateRef<any>;
   @ViewChild('successDialogTemplate') successDialogTemplate?: TemplateRef<any>;
 
@@ -29,13 +29,11 @@ export class TaskItemComponent implements OnInit {
     if (this.successDialogTemplate) {
       const dialogRef = this.dialog.open(this.successDialogTemplate);
 
-      setTimeout(() => {
-        dialogRef.close();
-      }, 2000)
+      setTimeout(() => dialogRef.close(), 2000)
     }
   }
 
-  deleteItem(item: Roupa) {
+  deleteItem(item: Clothing) {
     this.listService.deleteClothing(item.id).subscribe()
     this.item = undefined;
     this.openSuccessDialog()

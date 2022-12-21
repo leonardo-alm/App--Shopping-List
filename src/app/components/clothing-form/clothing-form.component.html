@@ -1,27 +1,34 @@
 <form class="task-form" (ngSubmit)="submit()" [formGroup]="clothingForm" #formDir="ngForm">
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Tipo</mat-label>
-    <input matInput formControlName="tipo" placeholder="Informe o tipo">
+    <mat-label>Type</mat-label>
+    <input matInput formControlName="type" placeholder="Inform the type">
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Tamanho</mat-label>
-    <input matInput formControlName="tamanho" placeholder="Informe o tamanho">
+    <mat-label>Size</mat-label>
+    <input matInput formControlName="size" placeholder="Inform the size">
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Cor</mat-label>
-    <input matInput formControlName="cor" placeholder="Informe a cor">
+    <mat-label>Color</mat-label>
+    <input matInput formControlName="color" placeholder="Inform the color">
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Gênero</mat-label>
-    <input matInput formControlName="genero" placeholder="Informe o gênero">
+    <mat-label>Gender</mat-label>
+    <input matInput formControlName="gender" placeholder="Inform the gender">
   </mat-form-field>
 
   <mat-form-field class="full-width" appearance="fill">
-    <mat-label>Quantidade</mat-label>
-    <input matInput formControlName="quantidade" placeholder="Informe a quantidade">
+    <mat-label>Amount</mat-label>
+    <input matInput formControlName="amount" placeholder="Inform the amount">
   </mat-form-field>
-  <button mat-raised-button class="sbmt" type="submit" value="">{{ botaoText }}</button>
+  
+  <div>
+    <button mat-raised-button class="sbmt" type="submit" value="">{{ buttonText }}</button>
+    <button mat-raised-button class="sbmt" type="submit" value="">
+      <a routerLink="/clothes">Cancel</a>
+    </button>
+  </div>
+
 </form>

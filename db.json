@@ -2,27 +2,59 @@
   "clothes": [
     {
       "id": 2,
-      "tipo": "Calça",
-      "tamanho": 40,
-      "cor": "preta",
-      "genero": "masculino",
-      "quantidade": 1
+      "type": "Pants",
+      "size": 40,
+      "color": "Black",
+      "gender": "Male",
+      "amount": 1
     },
     {
       "id": 3,
-      "tipo": "Vestido",
-      "tamanho": "P",
-      "cor": "azul",
-      "genero": "feminino",
-      "quantidade": 1
+      "type": "Dress",
+      "size": "S",
+      "color": "Blue",
+      "gender": "Female",
+      "amount": 1
     },
     {
       "id": 4,
-      "tipo": "Sapato",
-      "tamanho": 36,
-      "cor": "vermelho",
-      "genero": "feminino",
-      "quantidade": "2"
+      "type": "Shoes",
+      "size": 36,
+      "color": "White",
+      "gender": "Female",
+      "amount": "2"
+    },
+    {
+      "id": 5,
+      "type": "T-Shirt",
+      "size": "L",
+      "color": "Green",
+      "gender": "",
+      "amount": "1"
+    },
+    {
+      "id": 6,
+      "type": "Suit",
+      "size": "M",
+      "color": "Dark Blue",
+      "gender": "Male",
+      "amount": "1"
+    },
+    {
+      "id": 7,
+      "type": "Skirt",
+      "size": "XS",
+      "color": "Brown",
+      "gender": "Female",
+      "amount": "2"
+    },
+    {
+      "id": 8,
+      "type": "Hat",
+      "size": "M",
+      "color": "Black",
+      "gender": "",
+      "amount": "4"
     }
   ]
 }

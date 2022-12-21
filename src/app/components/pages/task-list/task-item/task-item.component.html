@@ -1,19 +1,19 @@
 <mat-expansion-panel hideToggle *ngIf="item">
     <mat-expansion-panel-header>
         <mat-panel-title>
-            {{item.tipo}}
+            {{item.type}}
         </mat-panel-title>
         <mat-panel-description>
-            Este é o sumário do item {{item.tipo}}
+            see more details
         </mat-panel-description>
     </mat-expansion-panel-header>
     <div>
         <ul>
-            <li>Roupa: {{item.tipo}}</li>
-            <li>Tamanho: {{item.tamanho}}</li>
-            <li>Cor: {{item.cor}}</li>
-            <li>Genero: {{item.genero}}</li>
-            <li>Quantidade: {{item.quantidade}}</li>
+            <li>Item: {{item.type}}</li>
+            <li>Size: {{item.size}}</li>
+            <li>Color: {{item.color}}</li>
+            <li>Gender: {{item.gender}}</li>
+            <li>Amount: {{item.amount}}</li>
         </ul>
         <button class="example-icon delete" aria-label="Example icon-button with delete icon">
             <mat-icon (click)="openConfirmDialog()" class="example-icon" aria-hidden="false"
@@ -27,14 +27,14 @@
     </div>
 
     <ng-template #confirmDialogTemplate>
-        <div>Tem certeza que quer deletar?</div>
+        <div>Are you sure you want to delete this item?</div>
         <div class="buttons">
-            <button mat-raised-button mat-dialog-close class="no btn">Não</button>
-            <button mat-raised-button mat-dialog-close (click)="deleteItem(item)" class="yes btn">Sim</button>
+            <button mat-raised-button mat-dialog-close class="no btn">No</button>
+            <button mat-raised-button mat-dialog-close (click)="deleteItem(item)" class="yes btn">Yes</button>
         </div>
     </ng-template>
     
     <ng-template #successDialogTemplate>
-     <div>Item deletado com sucesso!</div>
+     <div>Item successfully deleted!</div>
     </ng-template>
 </mat-expansion-panel>

@@ -1,7 +1,7 @@
 import { Component, OnInit, TemplateRef, ViewChild } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Roupa } from 'src/app/Roupa';
+import { Clothing } from 'src/app/Clothing';
 import { ListService } from 'src/app/services/list.service';
 
 @Component({
@@ -11,8 +11,8 @@ import { ListService } from 'src/app/services/list.service';
 })
 export class EditClothingComponent implements OnInit {
 
-  botao: string = "Atualizar!"
-  roupa?: Roupa
+  confirmButton: string = "Update"
+  Clothing?: Clothing
   @ViewChild('dialogTemplate') dialogTemplate?: TemplateRef<any>;
   
   constructor(private listService: ListService, private route: ActivatedRoute, private router: Router, private dialog: MatDialog) { }
@@ -20,25 +20,21 @@ export class EditClothingComponent implements OnInit {
   ngOnInit(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'))
 
-    this.listService.getClothing(id).subscribe((roupa) => this.roupa = roupa) 
+    this.listService.getClothing(id).subscribe((Clothing) => this.Clothing = Clothing) 
   }
 
   openDialog() {
     if (this.dialogTemplate) {
-      const dialogRef = this.dialog.open(this.dialogTemplate, {
-        data: { title: "atualizado" }
-      });
+      const dialogRef = this.dialog.open(this.dialogTemplate);
 
-      setTimeout(() => {
-        dialogRef.close();
-      }, 2000)
+      setTimeout(() => dialogRef.close(), 2000)
     }
   }
 
-  editClothing(roupa: Roupa){
-    const id = this.roupa?.id
+  editClothing(Clothing: Clothing){
+    const id = this.Clothing?.id
 
-    this.listService.updateClothing(id!, roupa).subscribe()
+    this.listService.updateClothing(id!, Clothing).subscribe()
     this.router.navigate(['/'])
     this.openDialog()
   }

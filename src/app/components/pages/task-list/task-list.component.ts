@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Roupa } from 'src/app/Roupa';
+import { Clothing } from 'src/app/Clothing';
 import { ListService } from 'src/app/services/list.service';
 
 @Component({
@@ -8,18 +8,18 @@ import { ListService } from 'src/app/services/list.service';
   styleUrls: ['./task-list.component.css']
 })
 export class TaskListComponent implements OnInit {
-  roupas: Roupa[] = []
+  clothes: Clothing[] = []
 
   constructor(private listService: ListService) { 
-    this.getRoupas()
+    this.getClothings()
   }
 
   ngOnInit(): void {
     
   }
 
-  getRoupas(): void{
-    this.listService.getClothes().subscribe((clothes) => this.roupas = clothes)
+  getClothings(): void{
+    this.listService.getClothes().subscribe((clothes) => this.clothes = clothes)
   }
 
 }
