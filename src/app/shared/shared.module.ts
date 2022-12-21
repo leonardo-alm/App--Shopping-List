@@ -7,7 +7,6 @@ import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
 import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import { HeaderComponent } from './header/header.component';
-import { SuccessDialogComponent } from './success-dialog/success-dialog.component';
 import { FooterComponent } from './footer/footer.component';
 
 
@@ -17,7 +16,6 @@ import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     HeaderComponent,
-    SuccessDialogComponent,
     FooterComponent
   ],
   
@@ -30,7 +28,6 @@ import { FooterComponent } from './footer/footer.component';
   ],
   exports: [
     HeaderComponent,
-    SuccessDialogComponent,
     FooterComponent
   ]
 })
