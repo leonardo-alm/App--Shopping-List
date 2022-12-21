@@ -23,30 +23,6 @@
       "cor": "vermelho",
       "genero": "feminino",
       "quantidade": "2"
-    },
-    {
-      "id": 5,
-      "tipo": "sad",
-      "tamanho": "sad",
-      "cor": "",
-      "genero": "",
-      "quantidade": "asd"
-    },
-    {
-      "id": 9,
-      "tipo": "sd",
-      "tamanho": "ds",
-      "cor": "",
-      "genero": "",
-      "quantidade": "ds"
-    },
-    {
-      "id": 10,
-      "tipo": "as",
-      "tamanho": "saas",
-      "cor": "",
-      "genero": "",
-      "quantidade": "as"
     }
   ]
 }

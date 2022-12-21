@@ -25,7 +25,13 @@
     <div>Página adicionada aos favoritos!</div>
   </ng-template>
 
-  <ng-template #shareDialogTemplate>
-    <div>Página adicionada aos favoritos!</div>
+  <ng-template #shareDialogTemplate >
+    <share-buttons theme="modern-dark"
+    [include]="['copy', 'facebook', 'email', 'messenger', 'linkedin',  'print', 'reddit', 'telegram', 'twitter', 'whatsapp']"
+    [showIcon]="true"
+    [showText]="true"
+    url="https://www.linkedin.com/in/leonardo-almeida-187588148/"
+    class="pt-5">
+  </share-buttons>
   </ng-template>
 </mat-toolbar>

@@ -1,23 +1,30 @@
 .example-spacer {
     flex: 1 1 auto;
-  }
+}
 
-button{
+button {
     color: #24262b;
-} 
+}
 
-span, .share, button{
+span,
+.share,
+button {
     margin-left: 1rem;
 }
 
-mat-toolbar{
-    background-color:  #24262b;
+mat-toolbar {
+    background-color: #24262b;
 }
 
-.title{
+.title {
     color: whitesmoke;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
+}
+
+share-buttons {
+    background-color: #24262b;
+    width: 25vw;
 }
