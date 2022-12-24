@@ -1,12 +1,13 @@
 # Shopping List
 
-This is an Angular project created to make CRUD operations regarding clothing items.
+This is an Angular project front-end app.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+This application was developed to make CRUD operations regarding clothing items. The database was mocked with a json server, you need to run 'npm run server' in order to use the app, as 
+well as 'ng serve'
 
-## Database
 
-The database was mocked with a json server. Run npm run server in order to use the app.
+
+
 
