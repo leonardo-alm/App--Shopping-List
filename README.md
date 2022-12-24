@@ -1,6 +1,6 @@
 # Shopping List
 
-This is an Angular project front-end app.
+This is an Angular front-end app.
 
 ## Description
 
