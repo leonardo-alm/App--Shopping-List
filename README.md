@@ -4,7 +4,7 @@ This is an Angular front-end app developed to make CRUD operations regarding clo
 
 ## Demo
 
-![Shopping List Demo](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExOThlNThkNDQwYWE1MWU2MGU5NDYyYjI2ZjBjOWJhNjRjYmEwNTgzYiZjdD1n/CmQ8HIJYAppap6fthc/giphy.gif)
+<iframe src="https://giphy.com/embed/CmQ8HIJYAppap6fthc" width="480" height="307" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/CmQ8HIJYAppap6fthc">via GIPHY</a></p>
 
 
 
