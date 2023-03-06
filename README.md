@@ -4,7 +4,7 @@ This is an Angular front-end app developed to make CRUD operations regarding clo
 
 ## Demo
 
-<iframe src="https://giphy.com/embed/CmQ8HIJYAppap6fthc" width="480" height="307" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/CmQ8HIJYAppap6fthc">via GIPHY</a></p>
+![Farmers Market Finder Demo](demo/animacao.gif)
 
 
 
