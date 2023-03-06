@@ -4,7 +4,7 @@ This is an Angular app developed to make CRUD operations regarding clothing item
 
 ## Demo
 
-Please click on the gif below to see the demo in higher quality.
+To see the demo in higher quality click on the gif below.
 
 ![Shopping List Demo](demo/animacao.gif)
 
