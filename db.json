@@ -6,22 +6,6 @@
       "size": 40,
       "color": "Black",
       "gender": "Male",
-      "amount": 1
-    },
-    {
-      "id": 3,
-      "type": "Dress",
-      "size": "S",
-      "color": "Blue",
-      "gender": "Female",
-      "amount": 1
-    },
-    {
-      "id": 4,
-      "type": "Shoes",
-      "size": 36,
-      "color": "White",
-      "gender": "Female",
       "amount": "2"
     },
     {
@@ -33,28 +17,20 @@
       "amount": "1"
     },
     {
-      "id": 6,
-      "type": "Suit",
+      "id": 9,
+      "type": "Hat",
+      "size": "S",
+      "color": "Blue",
+      "gender": "Female",
+      "amount": "3"
+    },
+    {
+      "id": 10,
+      "type": "Shorts",
       "size": "M",
-      "color": "Dark Blue",
+      "color": "Blue",
       "gender": "Male",
       "amount": "1"
-    },
-    {
-      "id": 7,
-      "type": "Skirt",
-      "size": "XS",
-      "color": "Brown",
-      "gender": "Female",
-      "amount": "2"
-    },
-    {
-      "id": 8,
-      "type": "Hat",
-      "size": "M",
-      "color": "Black",
-      "gender": "",
-      "amount": "4"
     }
   ]
 }

@@ -3,8 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
 import { MaterialModule } from '../material/material.module';
-import { ShareButtonsModule } from 'ngx-sharebuttons/buttons';
-import { ShareIconsModule } from 'ngx-sharebuttons/icons';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -23,8 +21,6 @@ import { FooterComponent } from './footer/footer.component';
     CommonModule,
     MaterialModule,
     RouterModule,
-    ShareButtonsModule,
-    ShareIconsModule,
   ],
   exports: [
     HeaderComponent,
